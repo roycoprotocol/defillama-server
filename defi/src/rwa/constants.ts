@@ -4,21 +4,7 @@ import treasuries from "../protocols/treasury";
 
 export const excludedProtocolCategories: string[] = ["CEX"];
 
-export const keyMap: { [value: string]: string } = {
-    coingeckoId: "*Coingecko ID",
-    onChain: "onChainMcap",
-    defiActive: "defiActiveTvl",
-    excluded: "*",
-    assetName: "Name",
-    id: "*RWA ID",
-    projectId: "*projectID",
-    excludedWallets: "*Holders to be Removed for Active Marketcap",
-    activeMcap: "activeMcap",
-    price: "price",
-    holdersToRemove: "*HoldersToBeRemovedForActiveMarketcap"
-};
-
-export const unsupportedChains = ["provenance", "stellar"];
+export const unsupportedChains: string[] = [];
 
 
 export const protocolIdMap: { [id: string]: string } = {};
@@ -27,4 +13,3 @@ export const categoryMap: { [category: string]: string } = {};
   protocolIdMap[protocol.id] = protocol.name;
   categoryMap[protocol.id] = protocol.category;
 });
-
